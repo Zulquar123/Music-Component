@@ -2,7 +2,7 @@ import React from "react";
 import casatte from "./assets/download.png";
 
 export default function usic({ values, index, handlefavourite }) {
-  const { song, artist, music, movie } = values;
+  const { song, artist, music, movie, added } = values;
   return (
     <div className="w-86 h-[9.5rem] bg-cyan-600 rounded-xl">
       <div className="flex m-2">
@@ -19,10 +19,12 @@ export default function usic({ values, index, handlefavourite }) {
 
       <div className="flex justify-center ">
         <button
-          className="bg-[#272727] hover:bg-[#000000] p-2 rounded-2xl text-zinc-300 text-sm"
+          className={` ${
+            added ? " bg-[#F00707]" : "bg-[#272727] hover:bg-[#000000]"
+          } p-2 rounded-2xl text-zinc-300 text-sm`}
           onClick={() => handlefavourite(index)}
         >
-          Add to Favourite
+          {added == false ? "Add to Favourite" : "Remove the Song"}
         </button>
       </div>
     </div>
