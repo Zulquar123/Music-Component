@@ -34,10 +34,10 @@ export default function App() {
     },
   ];
   const [rawData, setData] = useState(data);
-  const handlefavourite = (musicIndex) => {
+  const handlefavourite = (id) => {
     setData((previous) => {
       return previous.map((item, index) => {
-        if (musicIndex === index) {
+        if (id === index) {
           return { ...item, added: !item.added };
         }
         return item;
@@ -53,7 +53,7 @@ export default function App() {
           <Music
             key={index}
             values={item}
-            index={index}
+            id={index}
             handlefavourite={handlefavourite}
           />
         ))}
