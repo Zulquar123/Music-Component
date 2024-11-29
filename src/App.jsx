@@ -1,6 +1,7 @@
 import { useState } from "react";
-import Navbar from "./navbar";
-import Music from "./music";
+import Navbar from "./Navbar";
+import Music from "./Music";
+
 
 export default function App() {
   const data = [
