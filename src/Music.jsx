@@ -1,7 +1,6 @@
-import React from "react";
 import casatte from "./assets/download.png";
 
-export default function usic({ values, id, handlefavourite }) {
+export default function Music({ values, id, handlefavourite }) {
   const { song, artist, music, movie, added } = values;
   return (
     <div className="w-86 h-[9.5rem] bg-cyan-600 rounded-xl">
